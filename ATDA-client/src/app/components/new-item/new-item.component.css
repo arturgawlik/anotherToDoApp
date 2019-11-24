@@ -1,0 +1,75 @@
+:host {
+    padding: 10px;
+    overflow-y: scroll;   
+}
+
+p {
+    text-align: center;
+}
+
+form {
+    display: grid;
+}
+
+label {
+    display: grid;
+    padding-bottom: 10px;
+}
+
+input {
+    margin: 0;
+}
+
+textarea {
+    margin: 0;
+    resize: vertical;
+}
+
+input:focus {
+    outline: 1px dashed blue;
+}
+
+textarea:focus {
+    outline: 1px dashed blue;
+}
+
+div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 70px);
+    gap: 5px;
+    justify-content: end;
+    padding-top: 20px;
+}
+
+
+
+button {
+    font-size: 16px;
+    border: 1px solid black;
+}
+
+.btn-cancel:hover {
+    background-color: coral;
+}
+
+.btn-save:hover {
+    background-color: greenyellow;
+}
+
+.btn-cancel:focus {
+    outline: 1px dashed blue;
+    background-color: coral;
+}
+
+.btn-save:focus {
+    outline: 1px dashed blue;
+    background-color: greenyellow;
+}
+
+.btn-cancel:active {
+    background-color: rgb(255, 173, 143);
+}
+
+.btn-save:active {
+    background-color: rgb(196, 252, 113);
+}

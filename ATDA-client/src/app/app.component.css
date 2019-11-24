@@ -1,0 +1,12 @@
+:host {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+
+@media (max-width: 480px) {
+    :host {
+        grid-template-columns: 1fr;
+        grid-template-rows: 3fr 2fr;
+    }   
+}

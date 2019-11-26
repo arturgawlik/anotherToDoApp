@@ -1,3 +1,65 @@
 :host {
     padding: 10px;
+    overflow-y: scroll;
+}
+
+h3 {
+    text-align: center;
+}
+
+/* ul {
+    overflow-y: scroll;
+} */
+
+h4 {
+    margin-top: 20px;
+    margin-bottom: 2px;
+}
+
+p {
+    margin-top: 2px;
+    margin-bottom: 20px;
+}
+
+.done * {
+    text-decoration: line-through;
+}
+
+li:hover {
+    outline: 1px black dashed;
+}
+
+.buttons {
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+    display: none;
+    color: rgb(125, 202, 9);
+}
+
+li:hover .buttons{
+    display: block;
+}
+
+li {
+    position:relative;
+}
+
+.buttons span {
+    /* cursor: pointer; */
+    font-size: 20px;
+}
+
+.buttons:hover span {
+    font-size: 30px;
+}
+
+span:active {
+    position: relative;
+    top: 2px;
+    left: 1px;
+}
+
+span {
+    user-select: none;
 }

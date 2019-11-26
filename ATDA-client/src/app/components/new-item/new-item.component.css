@@ -1,9 +1,14 @@
 :host {
     padding: 10px;
-    overflow-y: scroll;   
 }
 
-p {
+@media (max-width: 480px) {
+    :host {
+        border-top: 1px dashed black;
+    }
+}
+
+h3 {
     text-align: center;
 }
 
@@ -18,9 +23,11 @@ label {
 
 input {
     margin: 0;
+    border: 1px solid black;
 }
 
 textarea {
+    border: 1px solid black;
     margin: 0;
     resize: vertical;
 }

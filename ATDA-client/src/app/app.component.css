@@ -1,12 +1,12 @@
 :host {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 3fr 2fr;
     height: 100vh;
 }
 
 @media (max-width: 480px) {
     :host {
         grid-template-columns: 1fr;
-        grid-template-rows: 3fr 2fr;
+        grid-template-rows: minmax(220px, 3fr) 2fr;
     }   
 }

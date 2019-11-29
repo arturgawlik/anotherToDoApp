@@ -1,4 +1,4 @@
-<h3>TODO task's:</h3>
+<!-- <h3>TODO task's:</h3>
 
 <div>
     <ul>
@@ -116,6 +116,20 @@
             <h4>Posprzątać pokój</h4>
             <p>
                 Muszę to zrobić. Ostatnio sprątałem miesiąc temu
+            </p>
+        </li>
+    </ul>
+</div> -->
+<h3>TODO task's:</h3>
+<div>
+    <ul>
+        <li *ngFor="let item of items" [class.done]="item.done">
+            <div *ngIf="!item.done" class="buttons">
+                <span>&#10003;</span>
+            </div>
+            <h4>{{item.name}}</h4>
+            <p>
+                {{item.description}}
             </p>
         </li>
     </ul>

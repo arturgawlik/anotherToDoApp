@@ -1,15 +1,15 @@
 <h3>Add new TODO task:</h3>
-<form>
+<form [formGroup]="form" (ngSubmit)="formSubmit()">
     <label>
         Title:
-        <input>
+        <input formControlName="title">
     </label>
     <label>
         Description:
-        <textarea rows="10"></textarea>
+        <textarea rows="10" formControlName="description"></textarea>
     </label>
     <div>
-        <button type="button" class="btn-save">Save</button>
+        <button type="submit" class="btn-save">Save</button>
         <button type="button" class="btn-cancel">Cancel</button>
     </div>
 </form>

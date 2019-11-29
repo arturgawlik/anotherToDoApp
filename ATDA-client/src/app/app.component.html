@@ -1,2 +1,2 @@
-<app-existing-items></app-existing-items>
-<app-new-item></app-new-item>
+<app-existing-items [items]="items"></app-existing-items>
+<app-new-item (newItemAdded)="refreshList()"></app-new-item>

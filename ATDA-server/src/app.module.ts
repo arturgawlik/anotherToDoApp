@@ -3,6 +3,8 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Item } from './models/item.model';
+import { APP_INTERCEPTOR } from '@nestjs/core';
+import { ItemService } from './services/item/item.service';
 
 
 @Module({
@@ -18,9 +20,12 @@ import { Item } from './models/item.model';
         entities: [__dirname + '/**/*.model{.ts,.js}'],
         synchronize: true
       }
-    )
+    ),
+    TypeOrmModule.forFeature([Item])
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [
+    ItemService
+  ],
 })
 export class AppModule { }

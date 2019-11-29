@@ -10,11 +10,17 @@ export class Item {
     name: string;
 
     @Column()
+    description: string;
+
+    @Column()
     done: boolean;
 
     @Column()
     addDate: Date;
 
-    @Column()
+    @Column({nullable: true})
     doneDate: Date;
+
+    @Column()
+    userIdentyfier: string;
 }

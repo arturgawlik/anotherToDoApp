@@ -10,7 +10,10 @@ export class ItemService {
     }
 
     getAllByUserIdentyfier(userIdentyfier: string): Promise<Item[]> {
-        return this.itemRepository.find({userIdentyfier: userIdentyfier});
+        return this.itemRepository.createQueryBuilder()
+        .where(`item.userIdentyfier = '${userIdentyfier}'`)
+        .orderBy('id', 'DESC')
+        .getMany();
     }
 
     addItem(item: Item) {

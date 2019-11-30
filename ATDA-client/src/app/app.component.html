@@ -1,2 +1,2 @@
-<app-existing-items [items]="items"></app-existing-items>
+<app-existing-items [items]="items" (markAsDone)="markAsDone($event)"></app-existing-items>
 <app-new-item (newItemAdded)="refreshList()"></app-new-item>

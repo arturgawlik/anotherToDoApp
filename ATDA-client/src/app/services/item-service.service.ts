@@ -7,6 +7,7 @@ import { USER_ID_NAME_KEY } from '../utils/application-keys';
   providedIn: 'root'
 })
 export class ItemService {
+  
   constructor(private httpClient: HttpClient) {
   }
 
@@ -18,6 +19,11 @@ export class ItemService {
   addNew(title: string, description: string) {
     const userId = window.localStorage.getItem(USER_ID_NAME_KEY);
     return this.httpClient.post(`http://localhost:3000/items/${userId}`, { title: title, description: description });
+  }
+
+  markAsDone(item: Item) {
+    const userId = window.localStorage.getItem(USER_ID_NAME_KEY);
+    return this.httpClient.put(`http://localhost:3000/items/${userId}`, { itemId: item.id });
   }
 
 }

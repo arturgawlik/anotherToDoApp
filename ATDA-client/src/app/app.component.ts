@@ -34,4 +34,10 @@ export class AppComponent implements OnInit {
     });
   }
 
+  markAsDone(item: Item) {
+    this.itemService.markAsDone(item).subscribe(r => {
+      this.refreshList();
+    });
+  }
+
 }

@@ -125,7 +125,7 @@
     <ul>
         <li *ngFor="let item of items" [class.done]="item.done">
             <div *ngIf="!item.done" class="buttons">
-                <span>&#10003;</span>
+                <span (click)="markAsDone(item)">&#10003;</span>
             </div>
             <h4>{{item.name}}</h4>
             <p>

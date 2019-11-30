@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Item } from 'src/app/models/item.model';
 import { ItemService } from 'src/app/services/item-service.service';
 
@@ -10,5 +10,10 @@ import { ItemService } from 'src/app/services/item-service.service';
 export class ExistingItemsComponent {
 
   @Input() items: Item[];
+  @Output('markAsDone') markAsDoneEvent = new EventEmitter<Item>();
+
+  markAsDone(item: Item) {
+    this.markAsDoneEvent.emit(item);
+  }
 
 }

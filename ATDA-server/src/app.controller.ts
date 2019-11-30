@@ -1,4 +1,4 @@
-import { Controller, Get, Request, Post, Body, Param } from '@nestjs/common';
+import { Controller, Get, Request, Post, Body, Param, Put } from '@nestjs/common';
 import { ItemService } from './services/item/item.service';
 import { Item } from './models/item.model';
 
@@ -24,6 +24,14 @@ export class AppController {
       item.addDate = new Date();
       item.done = false;
       await this.itemService.addItem(item);
+    }
+    return {};
+  }
+
+  @Put('items/:id')
+  async MarkAsDone(@Param('id') userId, @Body('itemId')itemId: number) {
+    if (userId) {
+      const entity = await this.itemService.markAsDone(itemId, userId);
     }
     return {};
   }

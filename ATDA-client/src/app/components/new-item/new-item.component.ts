@@ -28,6 +28,10 @@ export class NewItemComponent implements OnInit {
     });
   }
 
+  cancelClicked() {
+    this.buildForm();
+  }
+
   formSubmit() {
     if (this.form.valid) {
       const res = this.itemService.addNew(this.form.value.title, this.form.value.description);
